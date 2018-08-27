@@ -1,4 +1,8 @@
-<p id="notice"><%= notice %></p>
 
+<p><%= @item.title %></p>
+<p><%= @item.category_id%></p>
+<p><%= @item.description%></p>
+<p><%= @item.price %></p>
+<p><%= @item.image_url %></p>
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>

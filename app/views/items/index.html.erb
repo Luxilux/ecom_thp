@@ -1,12 +1,14 @@
 
-<center> <h1>My item : les items de folies !  </h1> </center>
+<center> <h1> Liste des produits en ligne  </h1> </center>
 <table class = "table">
   <tr>
 
 <td>#ID</td>
 <td>Chat</td>
 <td>Description</td>
-<td>Actions</td>
+<td>Prix</td>
+<td>Image</td>
+<td>Pouvoir Administrateur</td>
 
   </tr>
 </thead>
@@ -16,9 +18,9 @@
 <td> <%= item.id %></td>
 <td> <%= item.title %></td>
 <td> <%= item.description %></td>
-
+<td> <%= item.price %></td>
+<td> <%= item.image_url %></td>
 <td>
-<a href="<%= new_item_path%>" class="btn btn-succes" type="submit" > Créer une nouvelle catégorie </a>
 <a href="<%= edit_item_path(item.id)%>" class="btn btn-primary" type="submit"> Editer </a>
 <a href="<%= item_path(item.id)%>" class="btn btn-danger" type="submit"
 data-confirm="Êtes vous sûr de vouloir suppirmer votre item ?" data-method="DELETE"> Supprimer </a>
@@ -26,4 +28,4 @@ data-confirm="Êtes vous sûr de vouloir suppirmer votre item ?" data-method="DE
 </tr>
 <% end %>
 </table>
-<a href="<%= new_item_path%>" class="btn btn-succes" type="submit" > Créer un nouveau item </a>
+<a href="<%= new_item_path%>" class="btn btn-succes" type="submit" > Ajouter un produit </a>
