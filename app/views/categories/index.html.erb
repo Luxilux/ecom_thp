@@ -1,0 +1,27 @@
+
+<center> <h1> Liste des catégories  </h1> </center>
+<table class = "table">
+  <tr>
+
+<td>#ID_Catégorie</td>
+<td>Catégorie</td>
+<td>Pouvoir Administrateur</td>
+
+  </tr>
+</thead>
+<tbody>
+<% @categories.each do |category| %>
+<tr>
+<td> <%= category.id %></td>
+<td> <%= category.category_name %></td>
+<td>
+<a href="<%= edit_category_path(category.id)%>" class="btn btn-primary" type="submit"> Editer </a>
+<a href="<%= category_path(category.id)%>" class="btn btn-danger" type="submit"
+data-confirm="Êtes vous sûr de vouloir suppirmer votre category ?" data-method="DELETE"> Supprimer </a>
+<td>
+</tr>
+<% end %>
+</table>
+<a href="<%= new_category_path%>" class="btn btn-succes" type="submit" > Ajouter un produit </a>
+<br>
+<a href="/items"> Liste des produits </a>

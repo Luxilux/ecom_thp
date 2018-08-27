@@ -1,0 +1,12 @@
+<p>
+<%= form_for @category do |f| %>
+
+<div class="form-group">
+<%= f.text_field :category_name, placeholder: "Catégorie", class: 'form-control' %>
+</div>
+
+<div class="form-group">
+  <button class="btn btn-primary" type="submit" > Ajouter cette catégorie </button>
+</div>
+
+<% end %>
