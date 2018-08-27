@@ -1,0 +1,29 @@
+
+<center> <h1>My item : les items de folies !  </h1> </center>
+<table class = "table">
+  <tr>
+
+<td>#ID</td>
+<td>Chat</td>
+<td>Description</td>
+<td>Actions</td>
+
+  </tr>
+</thead>
+<tbody>
+<% @items.each do |item| %>
+<tr>
+<td> <%= item.id %></td>
+<td> <%= item.title %></td>
+<td> <%= item.description %></td>
+
+<td>
+<a href="<%= new_item_path%>" class="btn btn-succes" type="submit" > Créer une nouvelle catégorie </a>
+<a href="<%= edit_item_path(item.id)%>" class="btn btn-primary" type="submit"> Editer </a>
+<a href="<%= item_path(item.id)%>" class="btn btn-danger" type="submit"
+data-confirm="Êtes vous sûr de vouloir suppirmer votre item ?" data-method="DELETE"> Supprimer </a>
+<td>
+</tr>
+<% end %>
+</table>
+<a href="<%= new_item_path%>" class="btn btn-succes" type="submit" > Créer un nouveau item </a>
